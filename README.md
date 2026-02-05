@@ -1,131 +1,109 @@
-# BloodLink Connect
+🩸 BloodLink – Emergency Blood Availability & Donor Matching System
+A real-time emergency response platform that connects blood donors, hospitals, and patients instantly when every minute matters.
 
-Blood donation platform with integrated frontend and backend.
+📌 Introduction
+Blood donation is one of the most critical requirements during medical emergencies such as accidents, surgeries, trauma cases, and childbirth.
+Despite having many willing donors, hospitals and patients often face delays due to lack of real-time donor availability, rare blood group shortages, and poor coordination.
 
-## 🚀 Quick Start
+BloodLink is a software-based solution designed to bridge this gap by enabling fast, reliable, and intelligent blood donor matching during emergencies.
 
-### Development
-```bash
-# Install all dependencies
-npm install
+❗ Problem Statement
+Emergency medical situations require immediate blood availability, but existing systems suffer from:
 
-# Terminal 1: Start backend (port 3001)
-npm run dev:backend
+Blood banks running out of required blood groups
+Rare blood groups being extremely difficult to find on time
+Manual calling and searching that wastes critical minutes
+No real-time visibility of donor availability
+Poor coordination between hospitals and donors
+These delays often result in postponed treatment and, in severe cases, loss of lives.
 
-# Terminal 2: Start frontend (port 8080)
-npm run dev:frontend
-```
+💡 Proposed Solution
+BloodLink is a web-based emergency blood donor matching system that acts as a digital emergency dispatcher.
 
-Frontend automatically proxies API requests to the backend. See [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed instructions.
+The platform:
 
-### Production
-```bash
-# Build frontend and prepare for production
-npm run build:full
+Allows patients or hospitals to raise emergency blood requests
+Automatically finds nearby eligible donors in real time
+Sends instant alerts via app notifications or SMS
+Enables fast communication between donors and hospitals
+Prioritizes rare blood groups and urgent cases
+The goal is to reduce response time and save lives during critical moments.
 
-# Deploy with backend (serves both API and static files)
-cd backend
-npm start
-```
+🎯 Objectives
+Reduce the time required to arrange blood during emergencies
+Provide real-time donor availability
+Ensure donor safety through eligibility and cooldown tracking
+Prioritize rare blood groups automatically
+Build a scalable, reliable, and accessible healthcare platform
+🔄 System Overview
+BloodLink follows a simple and effective emergency workflow:
 
-## 📖 Full Documentation
+Donors register with blood group, location, and basic details
+Patients or hospitals raise an emergency blood request
+The system filters eligible donors based on blood group and cooldown period
+Nearby donors are matched using location-based logic
+Emergency alerts are sent to multiple donors simultaneously
+The fastest available donor is selected based on live ETA
+Direct coordination enables successful blood donation
+This workflow minimizes manual effort and saves critical time.
 
-- **Setup & Development**: See [SETUP_GUIDE.md](SETUP_GUIDE.md)
-- **API Documentation**: See [backend/API_DOCS.md](backend/API_DOCS.md)
-- **Frontend Analysis**: See [backend/FRONTEND_ANALYSIS.md](backend/FRONTEND_ANALYSIS.md)
+🚀 Key Features
+Donor registration & eligibility tracking
+Emergency blood request system
+One-tap emergency mode for urgent cases
+Location-based donor matching
+Multi-donor request system (3–5 donors at once)
+Auto escalation if no donor responds
+Live ETA-based donor selection
+Donor acceptance & direct contact sharing
+SMS & app notifications (simulated)
+Rare blood group priority system
+Donation cooldown tracking (~90 days)
+Hospital verification system
+Donor trust score system
+Language & accessibility support
+Impact & analytics dashboard
+Ethical reward & donor gratitude system
+🛠️ Technology Stack
+Frontend: Lovable
+Backend: Cursor
+Database: Mock donor & emergency request data
+Maps & Location: Location-based matching logic (simulated)
+Notifications: App alerts and SMS notifications (simulated)
+This project is a working prototype that demonstrates real-world logic, workflows, and emergency response behavior.
 
----
+🧪 Prototype & Demo
+The BloddLink prototype demonstrates:
 
-## Additional Info
+Donor registration and availability management
+Emergency blood request creation
+Real-time donor matching flow
+Auto escalation when donors do not respond
+Donor acceptance and fastest-ETA selection
+Direct coordination between donor and hospital
+The prototype is designed to simulate how the system would function in real-life emergency scenarios.
 
-### Project Structure
+🌍 Expected Impact
+Faster emergency blood response times
+Reduced mortality due to blood shortages
+Better utilization of voluntary blood donors
+Improved coordination between hospitals and donors
+Increased trust and long-term donor participation
+🔮 Future Scope
+Integration with real SMS services (e.g., Twilio)
+Real-time GPS tracking and accurate ETA calculation
+Integration with blood banks and government health systems
+Android and iOS mobile applications
+AI-based prediction of blood demand trends
+Nationwide emergency blood network
+👥 Team & Hackathon Details
+Project Name: BloodLink
+Domain: HealthTech
+Type: Hackathon Project
+Focus: Emergency healthcare and blood availability
+Built as a solution to address real-world healthcare emergencies where timely blood access can save lives.
 
-- **Frontend**: React + Vite (TypeScript, Tailwind CSS)
-- **Backend**: Node.js + Express + Prisma + PostgreSQL
-- **Integration**: API proxy in development, unified server in production
+❤️ Final Note
+LifeLine is not just a blood donation platform — it is an emergency response system designed with one goal in mind:
 
-### Key Features
-
-- Proxy-based development (separate processes, automatic forwarding)
-- Single Express server in production (React + API)
-- Type-safe API with Zod validation
-- JWT authentication with role-based access
-- Blood donation request matching and verification system
-
----
-
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev       # Frontend only
-npm run dev:full  # Frontend + Backend
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Saving lives when every minute matters.
